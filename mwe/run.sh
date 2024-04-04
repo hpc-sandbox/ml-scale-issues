@@ -1,5 +1,4 @@
 #!/bin/bash
-#SBATCH -A m1302
 #SBATCH --nodes=2
 #SBATCH -q debug
 #SBATCH -t 00:30:00
@@ -21,8 +20,10 @@ BACKEND="gloo"
 TRAINERS=4
 JOBID=$SLURM_JOB_ID
 
-DATA_DIR="/pscratch/sd/s/sark777/Distributed_DGL/dataset"
 PROJ_PATH=$(pwd)
+
+# these data dirs are important to run the script
+DATA_DIR="/pscratch/sd/s/sark777/Distributed_DGL/dataset"
 PARTITION_DIR="/pscratch/sd/s/sark777/Distributed_DGL/partitions/${PARTITION_METHOD}/${DATASET_NAME}/${NUM_NODES}_parts/${DATASET_NAME}.json"
 NODELIST=$(scontrol show hostnames $SLURM_JOB_NODELIST) # get list of nodes
 
@@ -57,7 +58,6 @@ if [ "$NUM_IPS" -ne "$NUM_NODES" ]; then
     echo "Number of IPs ($NUM_IPS) does not match number of nodes ($NUM_NODES)"
     exit 1
 fi
-
 
 
 # Run the training script
