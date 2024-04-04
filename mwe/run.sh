@@ -23,8 +23,7 @@ JOBID=$SLURM_JOB_ID
 PROJ_PATH=$(pwd)
 
 # these data dirs are important to run the script
-DATA_DIR="/pscratch/sd/s/sark777/Distributed_DGL/dataset"
-PARTITION_DIR="/pscratch/sd/s/sark777/Distributed_DGL/partitions/${PARTITION_METHOD}/${DATASET_NAME}/${NUM_NODES}_parts/${DATASET_NAME}.json"
+PARTITION_DIR="/pscratch/sd/s/sark777/Distributed_DGL/mwe/partitions/${PARTITION_METHOD}/${DATASET_NAME}/${NUM_NODES}_parts/${DATASET_NAME}.json"
 NODELIST=$(scontrol show hostnames $SLURM_JOB_NODELIST) # get list of nodes
 
 
