@@ -2,7 +2,6 @@ import argparse
 import socket
 import dgl
 import torch as th
-import datetime
 
    
 def main(args):
@@ -14,7 +13,7 @@ def main(args):
     dgl.distributed.initialize(args.ip_config)
 
     print(f"{host_name}: Initializing PyTorch process group.")
-    th.distributed.init_process_group(backend=args.backend, timeout=datetime.timedelta(seconds=5400))
+    th.distributed.init_process_group(backend=args.backend)
     local_rank = args.local_rank
 
     print(f"{host_name}: Initializing DistGraph.")
