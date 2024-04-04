@@ -50,7 +50,7 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
-        "--local_rank", type=int, help="get rank of the process"
+        "--local-rank", type=int, help="get rank of the process"
     )
 
     args = parser.parse_args()

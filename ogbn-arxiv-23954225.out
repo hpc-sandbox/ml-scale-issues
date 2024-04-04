@@ -1,0 +1,81 @@
+Generating ip_config.txt...
+Getting first 10.249.x.x IP address for node: nid004673
+Getting first 10.249.x.x IP address for node: nid006327
+10.249.3.150
+10.249.16.156
+The number of OMP threads per trainer is set to 32
+/global/homes/s/sark777/.conda/envs/dgl/bin/python -m torch.distributed.launch --nproc_per_node=4 --nnodes=2 --node_rank=0 --master_addr=10.249.3.150 --master_port=1234 main.py --graph_name ogbn-arxiv --backend gloo --ip_config ip_config_23954225.txt
+/global/homes/s/sark777/.conda/envs/dgl/bin/python -m torch.distributed.launch --nproc_per_node=4 --nnodes=2 --node_rank=1 --master_addr=10.249.3.150 --master_port=1234 main.py --graph_name ogbn-arxiv --backend gloo --ip_config ip_config_23954225.txt
+nid006327: Initializing DistDGL.
+nid006327: Initializing DistDGL.
+nid006327: Initializing DistDGL.
+nid006327: Initializing DistDGL.
+nid004673: Initializing DistDGL.
+nid004673: Initializing DistDGL.
+nid004673: Initializing DistDGL.
+nid004673: Initializing DistDGL.
+Client [664698] waits on 10.249.3.150:59443
+Client [664696] waits on 10.249.3.150:55953
+Client [664697] waits on 10.249.3.150:41931
+Client [1272271] waits on 10.249.16.156:57139
+Client [1272268] waits on 10.249.16.156:53293
+Client [1272270] waits on 10.249.16.156:42667
+Client [1272269] waits on 10.249.16.156:34529
+Client [664699] waits on 10.249.3.150:39807
+Machine (0) group (0) client (4) connect to server successfuly!
+Machine (1) group (0) client (2) connect to server successfuly!
+Machine (1) group (0) client (3) connect to server successfuly!
+Machine (0) group (0) client (6) connect to server successfuly!
+Machine (0) group (0) client (7) connect to server successfuly!
+Machine (0) group (0) client (5) connect to server successfuly!
+Machine (1) group (0) client (0) connect to server successfuly!
+Machine (1) group (0) client (1) connect to server successfuly!
+nid006327: Initializing PyTorch process group.
+nid004673: Initializing PyTorch process group.
+nid006327: Initializing PyTorch process group.
+nid006327: Initializing PyTorch process group.
+nid006327: Initializing PyTorch process group.
+nid004673: Initializing PyTorch process group.
+nid004673: Initializing PyTorch process group.
+nid004673: Initializing PyTorch process group.
+nid006327: Initializing DistGraph.
+nid006327: Initializing DistGraph.
+nid006327: Initializing DistGraph.
+nid006327: Initializing DistGraph.
+nid004673: Initializing DistGraph.
+nid004673: Initializing DistGraph.
+nid004673: Initializing DistGraph.
+nid004673: Initializing DistGraph.
+nid004673: Finished loading graph ogbn-arxiv.
+nid006327: Finished loading graph ogbn-arxiv.nid006327: Finished loading graph ogbn-arxiv.
+
+nid006327: Finished loading graph ogbn-arxiv.
+nid004673: Finished loading graph ogbn-arxiv.nid004673: Finished loading graph ogbn-arxiv.
+
+nid004673: Finished loading graph ogbn-arxiv.
+nid006327: Finished loading graph ogbn-arxiv.
+Client[0] in group[0] is exiting...
+Client[2] in group[0] is exiting...
+Client[3] in group[0] is exiting...
+Client[7] in group[0] is exiting...
+Client[4] in group[0] is exiting...Client[5] in group[0] is exiting...
+
+Client[6] in group[0] is exiting...
+Client[1] in group[0] is exiting...
+nid004673: Initializing DistDGL.
+load ogbn-arxiv
+Start to create specified graph formats which may take non-trivial time.
+Finished creating specified graph formats.
+start graph service on server 0 for part 0
+Server is waiting for connections on [10.249.3.150:30050]...
+Server (0) shutdown.
+Server is exiting...
+nid006327: Initializing DistDGL.
+load ogbn-arxiv
+Start to create specified graph formats which may take non-trivial time.
+Finished creating specified graph formats.
+start graph service on server 1 for part 1
+Server is waiting for connections on [10.249.16.156:30050]...
+Server (1) shutdown.
+Server is exiting...
+cleanupu process runs

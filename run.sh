@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -A m1302
-#SBATCH --nodes=1
-#SBATCH -q regular
+#SBATCH --nodes=2
+#SBATCH -q debug
 #SBATCH -t 00:30:00
 #SBATCH --constraint=cpu
 #SBATCH --job-name=ogbn-arxiv
@@ -10,8 +10,7 @@
 
 ulimit -c unlimited
 ulimit -v unlimited
-module load cudatoolkit/11.7
-source activate dgl-dev-gpu-117
+source activate dgl
 PYTHON_PATH=$(which python)
 
 DATASET_NAME="ogbn-arxiv"
