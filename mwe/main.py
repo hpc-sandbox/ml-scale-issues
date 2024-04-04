@@ -1,5 +1,4 @@
 import argparse
-from collections import defaultdict
 import socket
 import dgl
 import torch as th
